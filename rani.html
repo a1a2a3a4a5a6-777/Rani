@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>31 August — 7 August | A Story</title>
+
+  <meta name="description"
+        content="31 August 2025 से 7 August 2026 तक की एक अधूरी कहानी।">
+
+  <meta name="theme-color" content="#090909">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+  <style>
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #080808;
+      color: #eee;
+      font-family: "Inter", sans-serif;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: #c9a86a;
+      color: #080808;
+    }
+
+
+    /* =====================================================
+       BACKGROUND
+    ===================================================== */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -3;
+
+      background:
+        radial-gradient(
+          circle at 50% 10%,
+          rgba(201, 168, 106, 0.12),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 10% 70%,
+          rgba(255, 255, 255, 0.035),
+          transparent 25%
+        );
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 100;
+
+      opacity: 0.035;
+
+      background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+    }
+
+
+    /* =====================================================
+       SCROLL BAR
+    ===================================================== */
+
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #080808;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #3a3328;
+      border-radius: 20px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c9a86a;
+    }
+
+
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 50;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 20px 7%;
+
+      background: rgba(8, 8, 8, 0.65);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .brand {
+      color: #fff;
+      text-decoration: none;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    .brand span {
+      color: #c9a86a;
+    }
+
+    .nav-link {
+      color: #999;
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #c9a86a;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 130px 20px 100px;
+
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      color: #c9a86a;
+      font-size: 11px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+
+      margin-bottom: 25px;
+
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .hero h1 {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: clamp(65px, 12vw, 150px);
+
+      font-weight: 400;
+      line-height: 0.85;
+
+      letter-spacing: -4px;
+
+      margin-bottom: 35px;
+
+      animation: fadeUp 1.2s ease forwards;
+    }
+
+    .hero h1 span {
+      color: #c9a86a;
+      font-style: italic;
+    }
+
+    .hero-subtitle {
+      max-width: 650px;
+      margin: auto;
+
+      color: #999;
+
+      font-size: 15px;
+      font-weight: 300;
+
+      animation: fadeUp 1.4s ease forwards;
+    }
+
+    .hero-date {
+      margin-top: 45px;
+
+      color: #555;
+
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+
+      animation: fadeUp 1.6s ease forwards;
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      color: #555;
+
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 45px;
+
+      margin: 10px auto 0;
+
+      background: linear-gradient(
+        to bottom,
+        #c9a86a,
+        transparent
+      );
+    }
+
+
+    /* =====================================================
+       INTRO
+    ===================================================== */
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+
+      padding: 150px 25px;
+
+      text-align: center;
+    }
+
+    .intro-mark {
+      color: #c9a86a;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 60px;
+      line-height: 1;
+    }
+
+    .intro p {
+      margin-top: 25px;
+
+      color: #bbb;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: clamp(25px, 4vw, 38px);
+
+      line-height: 1.35;
+    }
+
+    .intro p span {
+      color: #fff;
+    }
+
+
+    /* =====================================================
+       STORY
+    ===================================================== */
+
+    .story {
+      width: min(1000px, 90%);
+      margin: auto;
+      position: relative;
+
+      padding-bottom: 180px;
+    }
+
+    .story::before {
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      bottom: 0;
+      left: 50%;
+
+      width: 1px;
+
+      background:
+        linear-gradient(
+          to bottom,
+          transparent,
+          rgba(201,168,106,0.5) 10%,
+          rgba(201,168,106,0.15) 90%,
+          transparent
+        );
+
+      transform: translateX(-50%);
+    }
+
+
+    /* =====================================================
+       CHAPTER
+    ===================================================== */
+
+    .chapter {
+      width: 50%;
+
+      padding: 40px 55px;
+
+      position: relative;
+
+      opacity: 0;
+      transform: translateY(40px);
+
+      transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+    }
+
+    .chapter.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .chapter:nth-child(even) {
+      margin-left: 50%;
+    }
+
+    .chapter::before {
+      content: "";
+
+      position: absolute;
+
+      top: 52px;
+
+      width: 11px;
+      height: 11px;
+
+      background: #080808;
+
+      border: 2px solid #c9a86a;
+
+      border-radius: 50%;
+
+      box-shadow:
+        0 0 0 6px #080808,
+        0 0 18px rgba(201,168,106,0.25);
+    }
+
+    .chapter:nth-child(odd)::before {
+      right: -6px;
+    }
+
+    .chapter:nth-child(even)::before {
+      left: -6px;
+    }
+
+
+    /* =====================================================
+       CHAPTER CARD
+    ===================================================== */
+
+    .chapter-card {
+      padding: 35px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.045),
+          rgba(255,255,255,0.015)
+        );
+
+      border: 1px solid rgba(255,255,255,0.07);
+
+      border-radius: 18px;
+
+      backdrop-filter: blur(12px);
+
+      transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+    }
+
+    .chapter-card:hover {
+      transform: translateY(-6px);
+
+      border-color:
+        rgba(201,168,106,0.35);
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,0.35),
+        0 0 30px rgba(201,168,106,0.04);
+    }
+
+    .chapter-date {
+      display: inline-block;
+
+      margin-bottom: 15px;
+
+      color: #c9a86a;
+
+      font-size: 10px;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+    }
+
+    .chapter h2 {
+      color: #fff;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 34px;
+
+      font-weight: 500;
+
+      line-height: 1.05;
+
+      margin-bottom: 20px;
+    }
+
+    .chapter h2 span {
+      color: #777;
+
+      display: block;
+
+      font-family: "Inter", sans-serif;
+
+      font-size: 10px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      margin-top: 8px;
+    }
+
+    .chapter p {
+      color: #999;
+
+      font-size: 14px;
+
+      font-weight: 300;
+
+      line-height: 1.9;
+
+      margin-bottom: 16px;
+    }
+
+    .chapter p:last-child {
+      margin-bottom: 0;
+    }
+
+    .quote {
+      margin: 25px 0;
+
+      padding-left: 18px;
+
+      border-left: 2px solid #c9a86a;
+
+      color: #ddd !important;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 23px !important;
+
+      line-height: 1.4 !important;
+
+      font-style: italic;
+    }
+
+
+    /* =====================================================
+       SPECIAL CHAPTERS
+    ===================================================== */
+
+    .chapter.special .chapter-card {
+      border-color: rgba(201,168,106,0.22);
+
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(201,168,106,0.08),
+          transparent 50%
+        ),
+        rgba(255,255,255,0.025);
+    }
+
+
+    /* =====================================================
+       EPILOGUE
+    ===================================================== */
+
+    .epilogue {
+      width: min(850px, 90%);
+
+      margin: auto;
+
+      padding: 120px 0 180px;
+
+      text-align: center;
+    }
+
+    .epilogue-label {
+      color: #c9a86a;
+
+      font-size: 10px;
+
+      letter-spacing: 5px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 30px;
+    }
+
+    .epilogue h2 {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: clamp(45px, 7vw, 80px);
+
+      font-weight: 400;
+
+      line-height: 1;
+
+      margin-bottom: 35px;
+    }
+
+    .epilogue p {
+      color: #999;
+
+      max-width: 680px;
+
+      margin: 0 auto 20px;
+
+      font-size: 15px;
+
+      font-weight: 300;
+    }
+
+    .epilogue .big-quote {
+      margin: 60px auto;
+
+      color: #eee;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: clamp(30px, 5vw, 50px);
+
+      line-height: 1.25;
+
+      font-style: italic;
+    }
+
+    .signature {
+      color: #c9a86a;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 25px;
+
+      font-style: italic;
+
+      margin-top: 45px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+
+      padding: 45px 20px;
+
+      text-align: center;
+
+      color: #555;
+
+      font-size: 10px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+    }
+
+    footer span {
+      color: #c9a86a;
+    }
+
+
+    /* =====================================================
+       ANIMATION
+    ===================================================== */
+
+    @keyframes fadeUp {
+
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 700px) {
+
+      .navbar {
+        padding: 18px 6%;
+      }
+
+      .brand {
+        font-size: 21px;
+      }
+
+      .hero {
+        min-height: 92vh;
+
+        padding-top: 110px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero-subtitle {
+        font-size: 14px;
+
+        max-width: 330px;
+      }
+
+      .intro {
+        padding: 100px 20px;
+      }
+
+      .story {
+        width: 92%;
+
+        padding-bottom: 80px;
+      }
+
+      .story::before {
+        left: 12px;
+      }
+
+      .chapter,
+      .chapter:nth-child(even) {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding: 30px 0 30px 42px;
+      }
+
+      .chapter::before,
+      .chapter:nth-child(odd)::before,
+      .chapter:nth-child(even)::before {
+        left: 6px;
+        right: auto;
+      }
+
+      .chapter-card {
+        padding: 26px 22px;
+
+        border-radius: 15px;
+      }
+
+      .chapter h2 {
+        font-size: 30px;
+      }
+
+      .chapter p {
+        font-size: 13px;
+      }
+
+      .quote {
+        font-size: 21px !important;
+      }
+
+      .epilogue {
+        padding: 90px 0 120px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =====================================================
+       NAVIGATION
+  ===================================================== -->
+
+  <nav class="navbar">
+
+    <a href="#" class="brand">
+      31 <span>·</span> 08
+    </a>
+
+    <a href="#story" class="nav-link">
+      Read Story
+    </a>
+
+  </nav>
+
+
+  <!-- =====================================================
+       HERO
+  ===================================================== -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        A Story by Aryan
+      </div>
+
+      <h1>
+        An <span>Unfinished</span><br>
+        Story
+      </h1>
+
+      <p class="hero-subtitle">
+        एक कहानी जो एक छोटे से “Happy Birthday” से शुरू हुई,
+        कुछ खूबसूरत पलों से गुज़री,
+        और आखिर में मुझे खुद से मिला गई।
+      </p>
+
+      <div class="hero-date">
+        31 August 2025 — 7 August 2026
+      </div>
+
+    </div>
+
+
+    <div class="scroll-down">
+
+      Scroll to remember
+
+      <div class="scroll-line"></div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       INTRO
+  ===================================================== -->
+
+  <section class="intro">
+
+    <div class="intro-mark">“</div>
+
+    <p>
+      कुछ लोग हमारी जिंदगी में
+      हमेशा रहने के लिए नहीं आते।
+      <br><br>
+
+      कुछ लोग आते हैं,
+      हमें बदलते हैं,
+      कुछ यादें देते हैं…
+      <br><br>
+
+      और फिर एक दिन
+      कहानी के उस पन्ने पर
+      रुक जाते हैं।
+    </p>
+
+  </section>
+
+
+  <!-- =====================================================
+       STORY TIMELINE
+  ===================================================== -->
+
+  <main id="story" class="story">
+
+
+    <!-- CHAPTER 01 -->
+
+    <article class="chapter">
+
+      <div class="chapter-card">
+
+        <div class="chapter-date">
+          31 August 2025
+        </div>
+
+        <h2>
+          Hello, Happy Birthday Aryan.
+          <span>The beginning</span>
+        </h2>
+
+        <p>
+          उस शाम Instagram खोला तो तुम्हारा message
+          दिखाई दिया।
+        </p>
+
+        <p class="quote">
+          “Hello, Happy Birthday Aryan.”
+        </p>
+
+        <p>
+          मेरा birthday 16 August को था।
+          मुझे खुद नहीं पता चला था कि मेरा birthday
+          कब आया और कब चला गया।
+          लेकिन 31 August की उस शाम तुम्हारा message
+          मेरे लिए अचानक बहुत खास बन गया।
+        </p>
+
+        <p>
+          मुझे नहीं पता था कि तुम्हें मेरी ID कहाँ से मिली।
+          बस इतना पता था कि आज पहली बार तुमसे बात हो रही थी।
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- CHAPTER 02 -->
+
+    <article class="chapter">
+
+      <div class="chapter-card">
+
+        <div class="chapter-date">
+          The First Clue
+        </div>
+
+        <h2>
+          Commerce?
+          <span>One word changed everything</span>
+        </h2>
+
+        <p>
+          मैंने पूछा कि तुम कौन-से subject में हो।
+          तुमने कहा—
+        </p>
+
+        <p class="quote">
+          “खुद पता कर लो।”
+        </p>
+
+        <p>
+          मैंने अंदाजे से कहा—
+          “Commerce?”
+        </p>
+
+        <p>
+          और पीछे से आई एक आवाज ने मेरा शक सच कर दिया।
+        </p>
+
+        <p class="quote">
+          “Commerce.”
+        </p>
+
+        <p>
+          उसी पल मुझे पता चला कि तुम मेरे ही school में थीं।
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- CHAPTER 03 -->
+
+    <article class="chapter">
+
+      <div class="chapter-card">
+
+        <div class="chapter-date">
+          The First Look
+        </div>
+
+        <h2>
+          पहली नजर
+          <span>School</span>
+        </h2>
+
+        <p>
+          हमने school में मिलने का सोचा।
+        </p>
+
+        <p>
+          फिर वो दिन आया।
+        </p>
+
+        <p>
+          कोई बड़ा dialogue नहीं हुआ।
+          कोई dramatic scene नहीं था।
+        </p>
+
+        <p class="quote">
+          बस एक नजर मिली।
+        </p>
+
+        <p>
+          लेकिन उसी एक नजर के बाद,
+          हमारी बातें धीरे-धीरे बढ़ने लगीं।
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- CHAPTER 04 -->
+
+    <article class="chapter">
+
+      <div class="chapter-card">
+
+        <div class="chapter-date">
+          7 September 2025
+        </div>
+
+        <h2>
+          वो Coaching
+          <span>A reason to meet</span>
+        </h2>
+
+        <p>
+          तुमने बताया कि तुम FZB Sunrise Coaching जाती हो।
+          वही coaching जहाँ मैं पहले पढ़ चुका था।
+        </p>
+
+        <p>
+          तुमने बस कहा—
+        </p>
+
+        <p class="quote">
+          “आ जाओ।”
+        </p>
+
+        <p>
+          और मैं चला गया।
+        </p>
+
+        <p>
+          फिर एक दिन, दो दिन…
+          और धीरे-धीरे coaching जाना मेरी routine बन गया।
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- CHAPTER 05 -->
+
+    <article class="chapter special">
+
+      <div class="chapter-card">
+
+        <div class="chapter-date">
+          9 September 2025
+        </div>
+
+        <h2>
+          तीन शब्द
+          <span>The day everything changed</span>
+        </h2>
+
+        <p>
+          आज मैंने अपने दिल की बात कह दी।
+        </p>
+
+        <p class="quote">
+          “I love you.”
+        </p>
+
+        <p>
+          और तुमने उसे स्वीकार कर लिया।
+        </p>
+
+        <p>
+          उस पल मुझे लगा जैसे मेरी जिंदगी में
+          जो कमी थी, वो पूरी हो गई।
+        </p>
+
+        <p>
+          मुझे लगा—
+          अब और कुछ नहीं चाहिए।
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- CHAPTER 06 -->
+
+    <article class="chapter">
+
+      <div class="chapter-card">
+
+        <div class="chapter-date">
+          Those Days
+        </div>
+
+        <h2>
+          हमारे छोटे-छोटे दिन
+          <span>The beautiful ordinary</span>
+        </h2>
+
+        <p>
+          रोज की मुलाकातें।
+          कुछ मिनट की बातें।
+          एक-दूसरे को देखकर मुस्कुरा देना।
+        </p>
+
+        <p>
+          कोई बड़ा event नहीं था।
+          कोई बड़ी कहानी नहीं थी।
+        </p>
+
+        <p class="quote">
+          बस छोटी-छोटी चीजों में बड़ी खुशी थी।
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- CHAPTER 07 -->
+
+    <article class="chapter">
+
+      <div class="chapter-card">
+
+        <div class="chapter-date">
+          Your Birthday
+        </div>
+
+        <h2>
+          वो दिन जो खास होना था
+          <span>And the first crack</span>
+        </h2>
+
+        <p>
+          मैं चाहता था कि तुम्हारा birthday
+          तुम्हारे लिए बहुत special हो।
+        </p>
+
+        <p>
+          सुबह जल्दी उठकर तुम्हें wish किया।
+          चाहता था कि शायद मुझसे पहले कोई तुम्हें wish न कर पाए।
+        </p>
+
+        <p>
+          लेकिन दिन वैसा नहीं गया जैसा मैंने सोचा था।
+        </p>
+
+        <p>
+          उस दिन हमारे बीच पहली बड़ी नाराजगी हुई।
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- CHAPTER 08 -->
+
+    <article class="chapter">
+
+      <div class="chapter-card">
+
+        <div class="chapter-date">
+          The Distance
+        </div>
+
+        <h2>
+          धीरे-धीरे
+          <span>Something was changing</span>
+        </h2>
+
+        <p>
+          पता ही नहीं चला कि कब हमारी हंसी की जगह
+          बहस ने ले ली।
+        </p>
+
+        <p>
+          मैं गुस्सा करता,
+          फिर बाद में खुद पछताता।
+        </p>
+
+        <p class="quote">
+          काश मैं उस समय थोड़ा शांत रहता।
+        </p>
+
+        <p>
+          मैं तुम्हें खोने से डरता था।
+          शायद उसी डर में कई बार मैं जरूरत से ज्यादा
+          रोकता-टोकता था।
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- CHAPTER 09 -->
+
+    <article class="chapter">
+
+      <div class="chapter-card">
+
+        <div class="chapter-date">
+          15 June 2026
+        </div>
+
+        <h2>
+          पहला Block
+          <span>The first goodbye</span>
+        </h2>
+
+        <p>
+          आज तुमने मुझे पहली बार block किया।
+        </p>
+
+        <p>
+          उस दिन मुझे पहली बार सच में लगा
+          कि शायद तुम मुझसे दूर जा रही हो।
+        </p>
+
+        <p>
+          उसके बाद छोटी-छोटी बातों पर भी
+          हमारे बीच लड़ाइयां बढ़ने लगीं।
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- CHAPTER 10 -->
+
+    <article class="chapter special">
+
+      <div class="chapter-card">
+
+        <div class="chapter-date">
+          26 July 2026
+        </div>
+
+        <h2>
+          रिश्ता हमारा है…
+          <span>But something had changed</span>
+        </h2>
+
+        <p>
+          आज तुमने कहा कि सब खत्म कर देते हैं।
+        </p>
+
+        <p>
+          मैंने हर तरफ से कोशिश की।
+          मनाने की।
+          समझाने की।
+          रिश्ता बचाने की।
+        </p>
+
+        <p class="quote">
+          “रिश्ता हमारा है, इसे बचा लो।”
+        </p>
+
+        <p class="quote">
+          “रिश्ता हमारा है, लेकिन चला तुम रहे थे,
+          मैं नहीं।”
+        </p>
+
+        <p>
+          उस जवाब के बाद मेरे पास कहने के लिए
+          बहुत कुछ था।
+          लेकिन शब्द नहीं थे।
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- CHAPTER 11 -->
+
+    <article class="chapter">
+
+      <div class="chapter-card">
+
+        <div class="chapter-date">
+          2 August 2026
+        </div>
+
+        <h2>
+          एक आखिरी कोशिश
+          <span>Maybe there was still a chance</span>
+        </h2>
+
+        <p>
+          आज मैं तुम्हें मनाने mall जा रहा हूं।
+        </p>
+
+        <p>
+          मन में सिर्फ एक बात है—
+          आज सब ठीक करना है।
+        </p>
+
+        <p>
+          आखिरकार तुम मान गईं।
+        </p>
+
+        <p class="quote">
+          “अब कभी ऊंची आवाज में नहीं बोलूंगा।”
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- CHAPTER 12 -->
+
+    <article class="chapter">
+
+      <div class="chapter-card">
+
+        <div class="chapter-date">
+          3 August 2026
+        </div>
+
+        <h2>
+          शायद सब ठीक हो रहा है
+          <span>Hope</span>
+        </h2>
+
+        <p>
+          आज मुझे उम्मीद दिखाई दे रही है।
+        </p>
+
+        <p>
+          तुम पहले से normal बात कर रही हो।
+          मैं छोटी-छोटी बातों को ignore कर देता हूं।
+        </p>
+
+        <p>
+          इस बार मैं बहस जीतना नहीं चाहता।
+        </p>
+
+        <p class="quote">
+          मैं सिर्फ रिश्ता बचाना चाहता हूं।
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- CHAPTER 13 -->
+
+    <article class="chapter">
+
+      <div class="chapter-card">
+
+        <div class="chapter-date">
+          5 August 2026
+        </div>
+
+        <h2>
+          “कुछ नहीं…”
+          <span>Something felt different</span>
+        </h2>
+
+        <p>
+          आज शाम तुम्हारा message आया।
+        </p>
+
+        <p>
+          तुम उदास लग रही थीं।
+        </p>
+
+        <p>
+          मैंने पूछा—
+          “क्या हुआ?”
+        </p>
+
+        <p class="quote">
+          “कुछ नहीं।”
+        </p>
+
+        <p>
+          तुमने कहा पढ़ाई को लेकर tension है।
+          मैंने समझाया।
+        </p>
+
+        <p>
+          लेकिन मुझे नहीं पता था कि
+          तुम्हारे अंदर कुछ और चल रहा था।
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- CHAPTER 14 -->
+
+    <article class="chapter">
+
+      <div class="chapter-card">
+
+        <div class="chapter-date">
+          6 August 2026
+        </div>
+
+        <h2>
+          जब सब कुछ बदल गया
+          <span>The silence before goodbye</span>
+        </h2>
+
+        <p>
+          शाम को phone देखा।
+        </p>
+
+        <p class="quote">
+          तुमने मुझे हर जगह block कर दिया था।
+        </p>
+
+        <p>
+          मुझे समझ नहीं आया कि अचानक क्या हुआ।
+        </p>
+
+        <p>
+          बात हुई तो तुम्हारी परेशानी के बारे में पता चला।
+          मैंने तुम्हें समझाया और कहा कि परेशान मत हो।
+        </p>
+
+        <p>
+          लेकिन मेरे मन में एक सवाल रह गया—
+        </p>
+
+        <p class="quote">
+          आखिर तुम्हारे अंदर चल क्या रहा है?
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- CHAPTER 15 -->
+
+    <article class="chapter special">
+
+      <div class="chapter-card">
+
+        <div class="chapter-date">
+          7 August 2026
+        </div>
+
+        <h2>
+          आखिरी बातचीत
+          <span>The last chapter</span>
+        </h2>
+
+        <p>
+          आज सुबह मैंने पूछा—
+          “घर पर सब ठीक है?”
+        </p>
+
+        <p>
+          तुमने कहा—
+          “हां, सब ठीक है।”
+        </p>
+
+        <p>
+          लेकिन फिर हमारी बातचीत उस मोड़ पर पहुंच गई
+          जहाँ से शायद वापस लौटना संभव नहीं था।
+        </p>
+
+        <p class="quote">
+          “मेरा तुमसे बात करने का मन नहीं करता।”
+        </p>
+
+        <p class="quote">
+          “मैं तुम्हारे साथ नहीं रहना चाहती।”
+        </p>
+
+        <p class="quote">
+          “तुमसे ऊब गई हूं।”
+        </p>
+
+        <p>
+          मैं बस सुनता रहा।
+        </p>
+
+        <p>
+          मेरे पास बहुत कुछ कहने को था।
+          लेकिन शायद उस वक्त शब्दों ने भी मेरा साथ छोड़ दिया था।
+        </p>
+
+        <p class="quote">
+          “ठीक है।”
+        </p>
+
+        <p>
+          शायद यही हमारी आखिरी बातचीत थी।
+        </p>
+
+      </div>
+
+    </article>
+
+
+  </main>
+
+
+  <!-- =====================================================
+       EPILOGUE
+  ===================================================== -->
+
+  <section class="epilogue">
+
+    <div class="epilogue-label">
+      Epilogue
+    </div>
+
+    <h2>
+      और फिर कहानी<br>
+      वहीं रुक गई।
+    </h2>
+
+    <p>
+      उसके बाद मैंने Instagram बंद कर दिया।
+    </p>
+
+    <p>
+      जिंदगी वही थी।
+      कमरा वही था।
+      फोन वही था।
+    </p>
+
+    <p>
+      बस एक चीज बदल गई थी—
+      किसी का message आने का इंतजार।
+    </p>
+
+    <div class="big-quote">
+      “किसी को खोने के डर में<br>
+      खुद को खो देना प्यार नहीं है।”
+    </div>
+
+    <p>
+      आज मुझे अपनी गलतियां समझ आती हैं।
+      गुस्सा, insecurity, जरूरत से ज्यादा रोकना-टोकना—
+      सब कुछ।
+    </p>
+
+    <p>
+      शायद हर कहानी का अंत साथ रहने में नहीं होता।
+      कुछ कहानियां हमें बदलने के लिए होती हैं।
+    </p>
+
+    <p>
+      हमारी कहानी अधूरी रह गई।
+      लेकिन जो कुछ भी था—
+      वो मेरे लिए कभी झूठ नहीं था।
+    </p>
+
+    <div class="signature">
+      — Your Engineer Ji 💔
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+
+  <footer>
+
+    31 August 2025
+    <span>—</span>
+    7 August 2026
+
+    <br><br>
+
+    A story remembered, not held.
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ===================================================== -->
+
+  <script>
+
+    /*
+      Reveal chapters when they enter viewport
+    */
+
+    const chapters =
+      document.querySelectorAll(".chapter");
+
+    const observer =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("show");
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    chapters.forEach(chapter => {
+
+      observer.observe(chapter);
+
+    });
+
+
+    /*
+      Navbar blur on scroll
+    */
+
+    const navbar =
+      document.querySelector(".navbar");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 50) {
+
+        navbar.style.background =
+          "rgba(8,8,8,0.88)";
+
+      } else {
+
+        navbar.style.background =
+          "rgba(8,8,8,0.65)";
+
+      }
+
+    });
+
+
+    /*
+      Prevent accidental image dragging
+    */
+
+    document.querySelectorAll("img")
+      .forEach(img => {
+
+        img.setAttribute("draggable", "false");
+
+      });
+
+  </script>
+
+</body>
+</html>
